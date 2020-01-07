@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main(){
 	int num1, num2, result;
-	void imprimeMensagem(void);
+	void imprimeMensagem();
 	int recebeNum();
 	int soma();
 

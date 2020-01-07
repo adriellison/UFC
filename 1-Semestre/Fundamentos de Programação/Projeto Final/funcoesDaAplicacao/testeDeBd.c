@@ -3,11 +3,12 @@
 int main(){
 
 	FILE *arq;
-	arq = fopen("and", "r");
+	arq = fopen("/bd/contatos.and", "r");
 	if(arq == NULL){
 		printf("Nao foi possivel localizar o banco de dados.\n");
-		system("dir");
 		system("pause");
-		system("cls");
+	}
+	else{
+		printf("O banco de dados esta pronto.\n");
 	}
 }

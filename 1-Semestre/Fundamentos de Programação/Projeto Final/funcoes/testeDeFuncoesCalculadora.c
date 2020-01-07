@@ -1,28 +1,23 @@
 #include <stdio.h>
-#include <windows.h>
 int main(){
-	int num1, num2, result;
+	// variaveis
+	int num1, num2; // numeros recebidos
+	int resultado; // resultado de cada operacao
+	int escolher; // escolher operacao
 
-	void mensagem();
-	void limpar();
-	int insiraNumero(int num1, int num2);
-	char operacao();
-	int somar(int num1, int num2);
-	int subtrair(int num1, int num2);
-	int multiplicar(int num1, int num2);
-	int dividir(int num1, int num2);
+	// Funcoes do programa
+	int insiraNumero();
+	int somar();
+	int subtrair();
+	int multiplicar();
+	int dividir();
 
-	mensagem();
-	insiraNumero(num1, num2);
-	operacao();
-}
-void mensagem(){
-	printf("\t---------------\n");
-	printf("\t| Calculadora |\n");
-	printf("\t---------------\n");
-}
-void limpar(){
-	system("cls");
+	//chamada de funcoes
+	insiraNumero();
+	somar();
+	subtrair();
+	multiplicar();
+	dividir();
 }
 int insiraNumero(int num1, int num2){
 	printf("Digite  o primeiro valor: ");
@@ -31,39 +26,20 @@ int insiraNumero(int num1, int num2){
 	scanf("%d", &num2);
 	return num1, num2;
 }
-char operacao(){
-	char escolher;
-	printf("Digite a operacao deseja: [+ - / *]");
-	scanf("%s", &escolher);
-	if(escolher == "+"){
-		somar();
-	}
-	else if(escolher == "-"){
-		subtrair();
-	}
-	else if(escolher == "*"){
-		multiplicar();
-	}
-	else if(escolher == "/"){
-		dividir();
-	}
-	else{
-		printf("Opcao invalida!");
-	}
+int somar(int num1, int num2, int resultado){
+	resultado = num1 + num2;
+	printf("\n\t%d + %d = %d", num1, num2, resultado);
+	// return resultado;
 }
-int somar(num1, num2){
-	result = num1 + num2;
-	return result;
+int subtrair(int num1, int num2, int resultado){
+	resultado = num1 - num2;
+	printf("\n\t%d - %d = %d", num1, num2, resultado);
 }
-int subtrair(num1, num2){
-	result = num1 - num2;
-	return result;
+int multiplicar(int num1, int num2, int resultado){
+	resultado = num1 * num2;
+	printf("\n\t%d * %d = %d", num1, num2, resultado);
 }
-int multiplicar(num1, num2){
-	result = num1 * num2;
-	return result;
-}
-int dividir(num1, num2){
-	result = num1 / num2;
-	return result;
+int dividir(int num1, int num2, int resultado){
+	resultado = num1 / num2;
+	printf("\n\t%d / %d = %d", num1, num2, resultado);
 }

@@ -58,14 +58,7 @@ int main(){
 			        system("color 0f");
 			        printf("\n\n\tTeste de bando de dados\n\tCriar banco de dados\n\tDeletar banco de dados\n\tVoltar\n");
 			        do{
-			            gotoxy(1,L);
-			            printf("-->");
-			            gotoxy(10,6);
-			            if(kbhit){a=getch();}
-			            if(a == 80 && b < 5){L2=L;L++;b++;}/*seta p/baixo*/
-			            if(a == 72 && b > 2){L2=L;L--;b--;}/*seta p/cima */
-			            if(L!=L2){gotoxy(1,L2);printf("   ");L2=L;}
-			            if(a == 13){escolha=b-1;}
+
 			        }while(escolha == 0);
 			        switch (escolha){
 			            case 1:
