@@ -5,10 +5,12 @@ int main(){
 	printf("Digite o numero N para a contrucao do Triangulo de Floyd:\n");
 	scanf("%d", &n);
 	printf("\n");
-	for(i = 1; i <= n; i++){
+	//primeiro for diz o numero de linhas
+	for(i = 0; i <= n; i++){
+		//segundo for valor do numero
 		for(j = 1; j <= i; j++){
 			cont++;
-			printf("%d", cont);
+			printf(" %d ", cont);
 		}
 	printf("\n");
 	}

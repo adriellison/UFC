@@ -1,13 +1,20 @@
-//Números Perfeitos. Em Matemática, um número perfeito é um número inteiro
-//para o qual a soma de todos os seus divisores positivos próprios (excluindo
-//ele mesmo) é igual ao próprio número. Os quatro primeiros números perfeitos
-//(6, 28, 496 e 8.128) eram os únicos conhecidos pelos gregos antigos desde
-//pelo menos Euclides.
 #include <stdio.h>
 int main(){
-	int num;
-	printf("Digite um numero: ")
+	int i, num, soma = 0;
+
+	printf("Digite um numero: ");
 	scanf("%d", &num);
-	
+
+	for(i = 1; i < num; i++){
+		if(num % i == 0){
+			soma += i;
+		}
+	}
+	if(soma == num){
+		printf("O numero %d e perfeito\n", num);
+	}
+	else{
+		printf("O numero %d nao e perfeito\n", num);
+	}
 	return 0;
 }

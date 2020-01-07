@@ -1,11 +1,11 @@
 #include <stdio.h>
 int main(){
-	int n, i, fat = 1;
-	printf("Fatorial, digite um numero: ");
-	scanf("%d", &n);
-	for(i = 1; i <= n; i++){
-		fat *= i;
+	int n, k, c = 1;
+	printf("Digite dois numeros separados por p:\n");
+	scanf("%dp%d", &n, &k);
+	for(int i=1; i<=k; i++){
+		c = c * n;
+
 	}
-	printf("%d", fat);
-	return 0;
+	printf("%d", c);
 }
